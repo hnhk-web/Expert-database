@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专家信息登记表 - 深圳市科技创新局</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/entry_page.css">
+</head>
+<body>
+<div class="container">
+    <!-- 头部区域 -->
+    <div class="header">
+        <div class="logo-section">
+            <div class="logo">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="title-section">
+                <h1>深圳市科技创新局专家信息登记表</h1>
+                <p>备选专家库信息录入系统</p>
+            </div>
+        </div>
+        <div class="form-info">
+            <p>请准确填写以下信息，带 <span class="required-star">*</span> 的为必填项</p>
+            <p>提交后信息将进入审核流程</p>
+        </div>
+    </div>
+
+    <!-- 主内容区域 -->
+    <div class="main-content">
+        <!-- 表单容器 -->
+        <div class="form-container">
+            <!-- 基本信息 -->
+            <div class="form-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div class="card-title">
+                        <h2>基本信息</h2>
+                        <p>专家个人身份信息</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="serialNumber" class="required">序号</label>
+                        <input type="text" id="serialNumber" class="form-control" readonly placeholder="自动生成">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="required">姓名</label>
+                        <input type="text" id="name" class="form-control" placeholder="请输入真实姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" class="required">性别</label>
+                        <select id="gender" class="form-control select" required>
+                            <option value="">请选择</option>
+                            <option value="male">男</option>
+                            <option value="female">女</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthdate" class="required">出生年月</label>
+                        <input type="date" id="birthdate" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ethnicity">民族</label>
+                        <input type="text" id="ethnicity" class="form-control" placeholder="请输入民族">
+                    </div>
+                    <div class="form-group">
+                        <label for="nativePlace">籍贯</label>
+                        <input type="text" id="nativePlace" class="form-control" placeholder="请输入籍贯">
+                    </div>
+                    <div class="form-group">
+                        <label for="politicalStatus">政治面貌</label>
+                        <select id="politicalStatus" class="form-control select">
+                            <option value="">请选择</option>
+                            <option value="中共党员">中共党员</option>
+                            <option value="共青团员">共青团员</option>
+                            <option value="民主党派">民主党派</option>
+                            <option value="群众">群众</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="idNumber" class="required">身份证号</label>
+                        <input type="text" id="idNumber" class="form-control" placeholder="请输入身份证号码" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 联系信息 -->
+            <div class="form-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="card-title">
+                        <h2>联系信息</h2>
+                        <p>联系方式与通讯地址</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="phone" class="required">手机号码</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="请输入手机号" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="officePhone">办公电话</label>
+                        <input type="tel" id="officePhone" class="form-control" placeholder="请输入办公电话">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="required">邮箱</label>
+                        <input type="email" id="email" class="form-control" placeholder="请输入邮箱地址" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fax">传真</label>
+                        <input type="text" id="fax" class="form-control" placeholder="请输入传真号码">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="address">通讯地址</label>
+                        <textarea id="address" class="form-control" placeholder="请输入详细通讯地址"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 单位信息 -->
+            <div class="form-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="card-title">
+                        <h2>单位信息</h2>
+                        <p>工作单位相关信息</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="workUnit" class="required">工作单位</label>
+                        <input type="text" id="workUnit" class="form-control" placeholder="请输入工作单位全称" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">部门</label>
+                        <input type="text" id="department" class="form-control" placeholder="请输入所在部门">
+                    </div>
+                    <div class="form-group">
+                        <label for="position">职务</label>
+                        <input type="text" id="position" class="form-control" placeholder="请输入职务">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">职称</label>
+                        <input type="text" id="title" class="form-control" placeholder="请输入职称">
+                    </div>
+                    <div class="form-group">
+                        <label for="workNature" class="required">工作性质</label>
+                        <select id="workNature" class="form-control select" required>
+                            <option value="">请选择</option>
+                            <option value="科研院所">科研院所</option>
+                            <option value="高等院校">高等院校</option>
+                            <option value="企业">企业</option>
+                            <option value="医疗机构">医疗机构</option>
+                            <option value="政府机关">政府机关</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="isEnterpriseRep">是否为企业法人</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="isEnterpriseRep" value="yes"> 是
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="isEnterpriseRep" value="no" checked> 否
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 学历资质 -->
+            <div class="form-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="card-title">
+                        <h2>学历资质</h2>
+                        <p>教育背景与专业资质</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="education" class="required">最高学历</label>
+                        <select id="education" class="form-control select" required>
+                            <option value="">请选择</option>
+                            <option value="博士">博士</option>
+                            <option value="硕士">硕士</option>
+                            <option value="本科">本科</option>
+                            <option value="专科">专科</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="degree">学位</label>
+                        <select id="degree" class="form-control select">
+                            <option value="">请选择</option>
+                            <option value="博士">博士</option>
+                            <option value="硕士">硕士</option>
+                            <option value="学士">学士</option>
+                            <option value="无">无</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="graduateSchool">毕业院校</label>
+                        <input type="text" id="graduateSchool" class="form-control" placeholder="请输入毕业院校">
+                    </div>
+                    <div class="form-group">
+                        <label for="major">所学专业</label>
+                        <input type="text" id="major" class="form-control" placeholder="请输入所学专业">
+                    </div>
+                    <div class="form-group">
+                        <label for="qualification">专业资质</label>
+                        <input type="text" id="qualification" class="form-control" placeholder="请输入专业资质证书">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="educationExperience">教育经历</label>
+                        <textarea id="educationExperience" class="form-control" placeholder="请简述主要教育经历"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 专业领域 -->
+            <div class="form-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="card-title">
+                        <h2>专业领域</h2>
+                        <p>研究方向与专业特长</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="researchDirection" class="required">主要研究方向</label>
+                        <input type="text" id="researchDirection" class="form-control" placeholder="请输入主要研究方向" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="technicalField" class="required">技术领域</label>
+                        <select id="technicalField" class="form-control select" required>
+                            <option value="">请选择</option>
+                            <option value="信息技术">信息技术</option>
+                            <option value="生物技术">生物技术</option>
+                            <option value="新材料">新材料</option>
+                            <option value="新能源">新能源</option>
+                            <option value="高端装备">高端装备</option>
+                            <option value="节能环保">节能环保</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="professionalTitle">专业技术职称</label>
+                        <input type="text" id="professionalTitle" class="form-control" placeholder="请输入专业技术职称">
+                    </div>
+                    <div class="form-group">
+                        <label for="workExperience">工作年限</label>
+                        <input type="number" id="workExperience" class="form-control" placeholder="请输入工作年限" min="0" max="50">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="researchAchievements">主要研究成果</label>
+                        <textarea id="researchAchievements" class="form-control" placeholder="请简述主要研究成果、获奖情况、专利等"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="expertiseDescription">专业特长描述</label>
+                        <textarea id="expertiseDescription" class="form-control" placeholder="请详细描述专业特长和技术优势"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 其他信息 -->
+            <div class="form-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="card-title">
+                        <h2>其他信息</h2>
+                        <p>补充说明与证明材料</p>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="languageAbility">语言能力</label>
+                        <input type="text" id="languageAbility" class="form-control" placeholder="如：英语六级、雅思7.0等">
+                    </div>
+                    <div class="form-group">
+                        <label for="overseasExperience">海外经历</label>
+                        <input type="text" id="overseasExperience" class="form-control" placeholder="如：留学、访问学者、工作经历等">
+                    </div>
+                    <div class="form-group">
+                        <label for="socialPosition">社会兼职</label>
+                        <input type="text" id="socialPosition" class="form-control" placeholder="如：学会职务、评委经历等">
+                    </div>
+                    <div class="form-group">
+                        <label for="honorsAwards">获得荣誉</label>
+                        <input type="text" id="honorsAwards" class="form-control" placeholder="如：荣誉称号、奖项等">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="evidenceLink" class="required">研究方向/获得荣誉佐证链接（优先官网）</label>
+                        <input type="url" id="evidenceLink" class="form-control" placeholder="请输入相关证明材料链接">
+                        <div class="form-hint">请提供能够证明您研究方向和获得荣誉的官方网站链接</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="required">是否符合重大项目专家</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="majorProjectExpert" value="yes"> 是
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="majorProjectExpert" value="no" checked> 否
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="majorProjectExpert" value="pending"> 待审核
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="majorProjectQualification">企业类专家符合重大库资质</label>
+                        <textarea id="majorProjectQualification" class="form-control" placeholder="如符合重大项目专家资质，请详细说明"></textarea>
+                        <div class="form-hint">请说明您符合重大项目专家资质的具体条件</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 表单操作 -->
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="resetBtn">
+                    <i class="fas fa-redo"></i> 重置表单
+                </button>
+                <button type="button" class="btn btn-primary" id="saveBtn">
+                    <i class="fas fa-save"></i> 保存草稿
+                </button>
+                <a href="test.html" class="btn btn-primary" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> 提交信息
+                </a>
+            </div>
+        </div>
+
+        <!-- 侧边栏 -->
+        <div class="sidebar">
+            <!-- 填写进度 -->
+            <div class="sidebar-card">
+                <div class="sidebar-title">
+                    <i class="fas fa-tasks"></i> 填写进度
+                </div>
+
+                <div class="progress-section">
+                    <div class="progress-text">
+                        <span>已完成</span>
+                        <span id="progressPercent">15%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">基本信息</span>
+                    <span class="info-value"><i class="fas fa-check-circle"></i> 已完成</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">单位信息</span>
+                    <span class="info-value"><i class="far fa-circle"></i> 待完成</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">学历资质</span>
+                    <span class="info-value"><i class="far fa-circle"></i> 待完成</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">专业领域</span>
+                    <span class="info-value"><i class="far fa-circle"></i> 待完成</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">其他信息</span>
+                    <span class="info-value"><i class="far fa-circle"></i> 待完成</span>
+                </div>
+            </div>
+
+            <!-- 填写提示 -->
+            <div class="sidebar-card">
+                <div class="sidebar-title">
+                    <i class="fas fa-info-circle"></i> 填写提示
+                </div>
+                <ul class="info-list">
+                    <li>请确保所有信息真实准确</li>
+                    <li>带 <span class="required-star">*</span> 的字段为必填项</li>
+                    <li>填写完成后请仔细核对信息</li>
+                    <li>可点击"保存草稿"暂存信息</li>
+                    <li>提交后信息将进入审核流程</li>
+                </ul>
+            </div>
+
+            <!-- 技术支持 -->
+            <div class="sidebar-card">
+                <div class="sidebar-title">
+                    <i class="fas fa-headset"></i> 技术支持
+                </div>
+                <p class="support-text">如遇到技术问题，请联系我们：</p>
+                <div class="info-item">
+                    <span class="info-label">电话</span>
+                    <span class="info-value">0755-12345678</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">邮箱</span>
+                    <span class="info-value">support@stib.gov.cn</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">办公时间</span>
+                    <span class="info-value">工作日 9:00-18:00</span>
+                </div>
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span>所有信息将安全加密存储</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 成功提示 -->
+<div class="success-message" id="successMessage">
+    <i class="fas fa-check-circle"></i> <span id="messageText">信息提交成功！</span>
+</div>
+
+<script src="js/entry_page.js"></script>
+</body>
+</html>

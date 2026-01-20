@@ -1,0 +1,189 @@
+:root {
+--button-color: #2892ce;
+--background-color: #108bf1;
+--border-color: #0b6ab9;
+--primary-color: #108bf1;
+--primary-dark: #0b6ab9;
+--primary-light: #e6f2ff;
+}
+
+/* 按钮基础样式 */
+.btn {
+    background-color: var(--background-color);
+    color: white;
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 按钮悬停效果 */
+.btn:hover {
+    background-color: var(--button-color);
+    border-color: var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 按钮激活状态 */
+.btn:active {
+    background-color: #0b6ab9;
+    transform: translateY(1px);
+}
+
+/* 禁用状态 */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* 卡片样式 */
+.card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 输入框样式 */
+.input {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 8px 12px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--button-color);
+    box-shadow: 0 0 0 2px rgba(40, 146, 206, 0.2);
+}
+
+/* 全局背景色 */
+body {
+    background-color: #ffffff;
+}
+
+/* 主要容器样式 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 标题样式 */
+.title {
+    color: var(--background-color);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* 链接样式 */
+.link {
+    color: var(--button-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--background-color);
+    text-decoration: underline;
+}
+
+/* 警告框样式 */
+.alert {
+    background-color: rgba(40, 146, 206, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 12px;
+    color: var(--background-color);
+}
+
+/* 表格样式 */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+}
+
+.table th,
+.table td {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+}
+
+.table th {
+    background-color: rgba(40, 146, 206, 0.1);
+    color: var(--background-color);
+    font-weight: 600;
+}
+
+/* 导航栏样式 */
+.navbar {
+    background-color: var(--background-color);
+    border-bottom: 2px solid var(--border-color);
+    padding: 12px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: var(--button-color);
+}
+
+/* 模态框样式 */
+.modal {
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: var(--background-color);
+    color: white;
+    padding: 16px;
+    border-radius: 6px 6px 0 0;
+}
+
+/* 进度条样式 */
+.progress {
+    background-color: rgba(40, 146, 206, 0.2);
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: var(--button-color);
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+/* 徽章样式 */
+.badge {
+    background-color: var(--button-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* 分割线样式 */
+.divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 16px 0;
+}
